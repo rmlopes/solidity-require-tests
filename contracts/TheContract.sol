@@ -1,6 +1,7 @@
 pragma solidity ^0.5.0;
 
 contract TheContract {
+    address private owner;
     /* Simple storage function. Only stores numbers smaller than maximum. */
     uint public thenumber;
     uint public constant maximum = 100;
@@ -14,6 +15,7 @@ contract TheContract {
 
     constructor() public 
     {
+        owner = msg.sender;
         thenumber = 50; 
     }
 
